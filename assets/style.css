@@ -1,0 +1,175 @@
+body{
+    background: url('what-the-hex.png');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+}
+
+.navbar {
+    z-index: 99;
+    width: 100%;
+    overflow: auto;
+    color: #fff;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+}
+
+.navbar-expand-lg {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navbar-brand{
+    margin: 0px 800px 0px 260px;
+    float: left;
+    width: 250px;
+    height: 90px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 90px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: #4aaaa5;
+}
+
+.nav-link {
+    color: #4aaaa5;
+}
+
+.nav-link:hover {
+    color: #4aaaa5;
+}
+#navbar-brand-override {
+    color:white;
+    display: inline-block;
+}
+
+#core {
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 650px;
+    border: 1px solid #ddd;
+    overflow: auto;
+}
+
+#core h2 {
+    border-bottom: solid;
+    border-bottom-color: #cccccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 24px;
+    color: #4aaaa5;
+    font-weight: bold;
+}
+
+#core p {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    line-height: 24px;
+}
+
+#profilePic {
+    float: left;
+    height: 150px;
+    margin-right: 10px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    background: #666666;
+    border: solid;
+    border-top-color: #4aaaa5;
+    border-top-width: 10px;
+    line-height: 80px;
+}
+
+.footer span {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color: whitesmoke;
+}
+
+.footer span a {
+    padding-right: 20px;
+}
+form {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+input {
+    display: table-cell;
+    width: 100%;
+}
+
+#messageField {
+   height: 200px;
+}
+
+#sendButton {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    padding: 10px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bolder;
+    width: 20%;
+}
+
+#core .imgContainer {
+    position: relative;
+    float: left;
+    width: 274px;
+    margin: 20px 0 25px;
+    overflow: auto;
+}
+
+#core .imgContainer:nth-child(even){
+    margin-right:40px;
+}
+#core .imgContainer img {
+    
+    width: 100%;
+    border: 0 none;
+    opacity: 0.8;
+}
+
+#core .imgContainer h3 {
+    position: absolute;
+    color: white;
+    background-color: #4aaaa5;
+    text-align: center;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    border-bottom: 0;
+    font-size: 20px;
+}
