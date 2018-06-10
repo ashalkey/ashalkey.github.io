@@ -1,0 +1,36 @@
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: orange;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: orange;
+}
+
+.jumbotron {
+    background-image: url('../images/titleBackground.jpg');  
+    background-size: auto 100%;  
+    text-align: center;
+}
+
+#gameImage {
+    width: 100%;
+}
+
+body {
+    background-color: gray;
+}
+
+#maFilm {
+    letter-spacing: 10px;
+}
+
+#gotEmAll {
+    text-align: center;
+    color: yellow;
+}
+
+#answeredFilms {
+    color: red;
+}

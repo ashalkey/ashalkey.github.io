@@ -1,62 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About | Alan Shalkey</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css"  href="assets/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel='stylesheet' type="text/css" href='assets/css/style.css'>
+    
+    <title>Hangman - Martial Arts Films</title>
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" id='navbar-brand-override'>Alan Shalkey</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div>
-          <ul class ="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">About</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
 
-      <div class='container-bg'>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Hangman - Martial Arts Films</h1>
+            </div>
+        </div>
+
         <div class='container'>
-          <div class='row'>
-              <div class='col-xs-12 col-md-8' id='core'>
-                    <h2>About Me</h2>
-                    <img class ='img-fluid' id='profilePic' src="https://media.licdn.com/dms/image/C5603AQGLkCPC5nU75Q/profile-displayphoto-shrink_200_200/0?e=1531353600&v=beta&t=cFSW0rteL23I36mqQCQiTQ_MO8JIvJdhnymBkP9iy24">
-                    <p>I grew up in York, Pennsylvania for most of my childhood.  After graduating high school I attended the University of Pittsburgh where
-                        I studied Philosophy and Psychology.  While studying in college I began working part-time in the hospitality industry primarily as a server 
-                        in fine dining establishments.  After graduating with my Bachelor's I continued to work in the hospitality industry while looking for a job
-                        to start buidling my career off of.  
-                    </p>
-                    <p>After working in customer service roles for most of my working years, I've decided to take up learning techincal skills to improve my job prospects.  
-                        I came to Colorado moved by the desire to furthering my education and the ultimate goal of moving into a career that challenges
-                        me and provides me with a sense of fulfillment.
-                    </p>
-                    <p>I currently do Technical Support work for a software company in Denver, Colorado and am attending a full stack web development certificate program
-                        offered through the University of Denver.  I enjoy practicing Muay Thai in my free time.
-                    </p>
-              </div>
-          </div>
-        </div>
-      </div>
+            <div class='row'>
+                <div class= 'col-md-12'>
+                    <h1 id='gotEmAll'></h1>
+                </div>
 
-      <footer class='footer'>
-          <div class='container'> 
-                <span>
-                    <strong>Email: </strong><a href="mailto:alanshalkey@gmail.com">alanshalkey@gmail.com</a></li>
-                    <strong>GitHub: </strong><a href="https://github.com/ashalkey" target="_blank">Alan Shalkey's GitHub</a></li>
-                    <strong>Linkedin: </strong><a href="https://www.linkedin.com/in/alan-shalkey-39590bb7/" target="_blank">Alan Shalkey</a></li>
-                </span>  
-          </div>
-      </footer>
+            </div>
+        </div>
+        <div class='container core'>
+            <div class='row'>
+                <div class='col md-6'>
+                        <img id='gameImage' src='assets/images/BruceLee.jpg' alt='Bruce Lee'>
+                        <h2>Answered Films: <span id='answeredFilms'></span></h2>
+                </div>
+                <div class='col-md-6'>
+                        <h2 id='introText'>Are you prepared? Press any key to get started!</h2>
+                        <h2>Wins: <span id='wins'>0</span></h2>
+                        <audio id='audio' src='assets/javascript/bruce-lee-scream.mp3'></audio>
+                        <h2>Current Film:</h2>
+                        <h2 id='maFilm'></h2>
+                        <h2 id='winText'></h2>
+                        <h2>Losses: <span id='losses'>0</span></h2>
+                        <h2>Number of guesses remaining: <span id='guesses'>10</span></h2>
+                        <h2>Letters guessed:</h2>
+                        <h2 id='lettersGuessed'></h2>
+                    </div>
+            </div>
+        </div>
+
+
+    
 </body>
+<script type='text/javascript' language='javascript' src='assets/javascript/game.js'></script>
 </html>
