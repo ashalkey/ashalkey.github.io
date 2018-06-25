@@ -1,0 +1,40 @@
+h1, h3 {
+    text-align: center;
+    font-family: 'Ceviche One', cursive;
+}
+
+#timer {
+    font-size: 50px;
+}
+
+#start-button {
+    font-family: 'Ceviche One', cursive;
+    font-size: 30px;
+}
+.centered-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn-group-vertical .btn {
+    margin-bottom: 10px;
+    font-family: 'Ceviche One', cursive;
+    font-size: 30px;
+}
+.question-text {
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 24px;
+}
+
+.results {
+    margin-bottom: 10px;
+    font-family: 'Ceviche One', cursive;
+    font-size: 30px;
+}
+
+.mx-auto {
+    width: 100%;
+    margin-bottom: 10px;
+}
