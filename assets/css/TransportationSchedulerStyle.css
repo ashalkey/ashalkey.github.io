@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'DS-DIGIB';
+    src: url('DS-DIGIB.TTF');
+}
+
+body {
+    background-color: black;
+    font-family: 'DS-DIGIB';
+    color: #32CD32;
+}
+
+.jumbotron {
+    background-color: black;
+}
+
+.card {
+    background-color: black;
+    border-color: #32CD32;
+}
+
+.card-header {
+    background-color: #32CD32;
+    color:black;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #32CD32;
+    color: black;
+    font-size: 20px;
+}
+
+.form-control {
+    caret-color: #32CD32;
+    background-color: black !important;
+    color: #32CD32 !important;
+    border-color: #32CD32 !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0.2em 0.1em #32CD32 !important; 
+    -webkit-box-shadow: 0 0 0.2em 0.1em #32cd32 !important;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0.3em 0.2em #32CD32 !important; 
+    -webkit-box-shadow: 0 0 0.3em 0.2em #32cd32 !important;
+}
+
+
+th, td {
+    text-align: center;
+}
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #32CD32;
+    color: black;
+}
+
+.remove-button {
+    margin-left: 20px;
+}
