@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-$('#submit-button').click(function(event) {
+$('#submit-button').click(function (event) {
 
   event.preventDefault();
 
@@ -30,89 +30,50 @@ $('#submit-button').click(function(event) {
   }
   justPushed = database.ref().push(newService);
 
-  var removeButton = $('<button>').text('remove')
-                                  .addClass('btn remove-button')
-                                  .attr('id', justPushed.key)
-                                  .click(function(){
-                                  database.ref().child($(this).attr('id')).remove();
-                                  $(this).remove();
-                                  $('#row' + $(this).attr('id')).remove();
-});
   $('#service-name').val('');
   $('#service-type').val('');
   $('#destination').val('');
   $('#first-arrival').val('');
   $('#frequency').val('');
 
-  database.ref().on('child_added', function(childSnapshot) {
-
-    var serviceName = childSnapshot.val().sName;
-    var serviceType = childSnapshot.val().sType;
-    var destination = childSnapshot.val().sDestination;
-    var firstArrival = childSnapshot.val().sFirstArrival;
-    var frequency = childSnapshot.val().sFrequency;
-
-    var convertedFirstArrival = moment(firstArrival, 'H:mm').subtract(1, 'years');
-
-
-    var timeDifference = moment().diff(moment(convertedFirstArrival), 'minutes');
-
-    timeRemainder = timeDifference % frequency;
-
-    var minutesAway = frequency - timeRemainder;
-    var nextArrivalTime = moment().add(minutesAway, 'minutes').format('hh:mm A');
-
-    var newRow = $('<tr>').attr('id', 'row' + removeButton.attr('id')).append(
-      $('<td>').text(serviceName),
-      $('<td>').text(serviceType),
-      $('<td>').text(destination),
-      $('<td>').text(frequency),
-      $('<td>').text(nextArrivalTime),
-      $('<td>').text(minutesAway),
-      removeButton
-    );
-
-    $('#current-schedule').append(newRow);
-
-    // keep from firing child added events multiple times after adding the first child 
-    //(called twice second time, three times third time, etc)
-
-    database.ref().off();
-});
-  
 });
 
-//   database.ref().on('child_added', function(childSnapshot) {
+database.ref().on('child_added', function (childSnapshot) {
 
-//     var serviceName = childSnapshot.val().sName;
-//     var serviceType = childSnapshot.val().sType;
-//     var destination = childSnapshot.val().sDestination;
-//     var firstArrival = childSnapshot.val().sFirstArrival;
-//     var frequency = childSnapshot.val().sFrequency;
+  var serviceName = childSnapshot.val().sName;
+  var serviceType = childSnapshot.val().sType;
+  var destination = childSnapshot.val().sDestination;
+  var firstArrival = childSnapshot.val().sFirstArrival;
+  var frequency = childSnapshot.val().sFrequency;
 
-//     var convertedFirstArrival = moment(firstArrival, 'H:mm').subtract(1, 'years');
+  var convertedFirstArrival = moment(firstArrival, 'H:mm').subtract(1, 'years');
 
 
-//     var timeDifference = moment().diff(moment(convertedFirstArrival), 'minutes');
+  var timeDifference = moment().diff(moment(convertedFirstArrival), 'minutes');
 
-//     timeRemainder = timeDifference % frequency;
+  timeRemainder = timeDifference % frequency;
 
-//     var minutesAway = frequency - timeRemainder;
-//     var nextArrivalTime = moment().add(minutesAway, 'minutes').format('hh:mm A');
+  var minutesAway = frequency - timeRemainder;
+  var nextArrivalTime = moment().add(minutesAway, 'minutes').format('hh:mm A');
 
-//     var newRow = $('<tr>').attr('id', 'row' + removeButton.attr('id')).append(
-//       $('<td>').text(serviceName),
-//       $('<td>').text(serviceType),
-//       $('<td>').text(destination),
-//       $('<td>').text(frequency),
-//       $('<td>').text(nextArrivalTime),
-//       $('<td>').text(minutesAway),
-//       removeButton
-//     );
-//     $('#current-schedule').append(newRow);
+  var removeButton = $('<button>').text('remove')
+    .addClass('btn remove-button')
+    .attr('id', childSnapshot.key)
+    .click(function () {
+      database.ref().child($(this).attr('id')).remove();
+      $(this).remove();
+      $('#row' + $(this).attr('id')).remove();
 
-//     // keep from firing child added events multiple times after adding the first child 
-//     //(called twice second time, three times third time, etc)
+    });
+  var newRow = $('<tr>').attr('id', 'row' + childSnapshot.key).append(
+    $('<td>').text(serviceName),
+    $('<td>').text(serviceType),
+    $('<td>').text(destination),
+    $('<td>').text(frequency),
+    $('<td>').text(nextArrivalTime),
+    $('<td>').text(minutesAway),
+    removeButton
+  );
+  $('#current-schedule').append(newRow);
 
-//     database.ref().off();
-// });
+});
