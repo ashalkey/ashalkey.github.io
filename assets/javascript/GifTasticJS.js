@@ -30,7 +30,7 @@ function gifButtonClicked() {
     $('.success-button').remove();
     var topic = $(this).attr('topic');
     searchTerm.q = topic;
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + $.param(searchTerm) + "&api_key=M1lXXefs46PgircNYcyBiwrJLlM3O6Vw&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + $.param(searchTerm) + "&api_key=M1lXXefs46PgircNYcyBiwrJLlM3O6Vw&limit=10";
     $.ajax({
         url: queryURL,
         method: "GET"
