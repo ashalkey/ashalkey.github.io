@@ -146,16 +146,16 @@ input {
 #core .imgContainer img {
     
     width: 100%;
+    height: 100%;
     border: 0 none;
-    opacity: 0.8;
 }
 
 #core .imgContainer h3 {
     position: absolute;
-    color: white;
-    background-color: #4aaaa5;
+    color: black;
+    /* background-color: #4aaaa5; */
     text-align: center;
-    bottom: 20px;
+    bottom: 90px;
     width: 100%;
     padding: 15px;
     margin-bottom: 0;
@@ -163,4 +163,31 @@ input {
     line-height: 30px;
     border-bottom: 0;
     font-size: 20px;
+    opacity: 0.8;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+#core .imgContainer h2 {
+    position: absolute;
+    color: black;
+    /* background-color: #4aaaa5; */
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    border-bottom: 0;
+    font-size: 20px;
+    opacity: 0.8;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 }
