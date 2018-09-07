@@ -1,13 +1,5 @@
-/* .bgimg {
-    background: url('../images/2dBG1.PNG') no-repeat center; 
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-} */
-
 body {
-        background: url('../images/2dBG1.PNG') no-repeat center center fixed; 
+        background: url('../images/2dBG.PNG') no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -51,13 +43,26 @@ a:hover {
 
 .centered-button {
     margin-top: 1%;
+    /* color: white; */
 }
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
+    font-family: 'Kanit', sans-serif;
     color: lime;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+p {
+    font-family: 'Rajdhani', sans-serif;
+    color: gold;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-size: 20px;
 }
 
